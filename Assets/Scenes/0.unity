@@ -140,6 +140,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dbec8f8cb8f7c647b09ce2fe45ec6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &436311688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436311680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbba286dc10e549b2bdec947ef8dbd3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _autoConnect: 1
+  _closeOnPause: 0
+  _mapBundle: {fileID: 0}
+  _workInEditor: 0
+  _localHostMode: 0
+  _localHost: 142.231.164.66
+  _localPort: 7001
+--- !u!1 &505915749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 505915752}
+  - component: {fileID: 505915751}
+  - component: {fileID: 505915750}
+  m_Layer: 0
+  m_Name: VisualScripting SceneVariables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &505915750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505915749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765181c9ef4b24d32a4f7cbd2ef370dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &505915751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505915749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!4 &505915752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505915749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &983866392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -203,6 +282,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 141632, guid: 3b4b271e01ba669489421baa2cc3471d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 436311684}
+    - targetCorrespondingSourceObject: {fileID: 141632, guid: 3b4b271e01ba669489421baa2cc3471d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 436311688}
   m_SourcePrefab: {fileID: 100100000, guid: 3b4b271e01ba669489421baa2cc3471d, type: 3}
 --- !u!1 &1385979870 stripped
 GameObject:
@@ -239,8 +321,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
-    _objectReferences: []
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 213459c4e328741488bbedb0dde6f43d, type: 2}
 --- !u!114 &1819874576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c345bd0a9a575c4fb11e87f7557a5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1819874580
+--- !u!114 &1819874582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,10 +372,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1819874573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8838bfc2c03add04da909fcc591b85f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f5937ce4de6a4254b9249339eea0c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abc: 0
+  _receiver: {fileID: 436311688}
+  _address: /scene
+  _mapBundle: {fileID: 0}
+  onReceive:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &597505684428461224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -367,7 +455,7 @@ PrefabInstance:
       addedObject: {fileID: 1819874579}
     - targetCorrespondingSourceObject: {fileID: 5893764774674202561, guid: 0bd4154d9123af04491bca2639ac0917, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1819874580}
+      addedObject: {fileID: 1819874582}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd4154d9123af04491bca2639ac0917, type: 3}
 --- !u!1001 &2782049360391028758
 PrefabInstance:
