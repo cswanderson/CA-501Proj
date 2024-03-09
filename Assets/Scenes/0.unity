@@ -337,7 +337,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SC","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
 --- !u!114 &1819874577
 MonoBehaviour:
@@ -363,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c345bd0a9a575c4fb11e87f7557a5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1819874582
+--- !u!114 &1819874581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,15 +373,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1819874573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5937ce4de6a4254b9249339eea0c2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 992aa880d8b09419f9d2757f68c61cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _receiver: {fileID: 436311688}
-  _address: /scene
+  _address: /address
   _mapBundle: {fileID: 0}
   onReceive:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1819874575}
+        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
+        m_MethodName: SendMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Mess
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &597505684428461224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -437,6 +450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5893764774674202561, guid: 0bd4154d9123af04491bca2639ac0917, type: 3}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -455,7 +472,7 @@ PrefabInstance:
       addedObject: {fileID: 1819874579}
     - targetCorrespondingSourceObject: {fileID: 5893764774674202561, guid: 0bd4154d9123af04491bca2639ac0917, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1819874582}
+      addedObject: {fileID: 1819874581}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd4154d9123af04491bca2639ac0917, type: 3}
 --- !u!1001 &2782049360391028758
 PrefabInstance:

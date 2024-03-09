@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 6,
-			"revision" : 0,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 789.0, 164.0, 1300.0, 802.0 ],
+		"rect" : [ 122.0, 213.0, 1300.0, 802.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-43",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 365.0, 828.125, 91.0, 22.0 ],
+					"text" : "prepend /scene"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-41",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 365.0, 795.3125, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-162",
@@ -48,7 +72,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 205.0, 902.0, 61.0, 36.0 ],
-					"presentation_linecount" : 2,
 					"style" : "helpfile_label",
 					"text" : "Control \nChange"
 				}
@@ -152,7 +175,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 486.0, 899.0, 50.0, 35.0 ],
+					"patching_rect" : [ 486.0, 899.0, 50.0, 36.0 ],
 					"text" : "0.817429"
 				}
 
@@ -177,7 +200,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 544.0, 876.0, 50.0, 35.0 ],
+					"patching_rect" : [ 544.0, 876.0, 50.0, 36.0 ],
 					"text" : "0.081743"
 				}
 
@@ -202,7 +225,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 752.0, 900.0, 50.0, 35.0 ],
+					"patching_rect" : [ 752.0, 900.0, 50.0, 36.0 ],
 					"text" : "0.133232"
 				}
 
@@ -232,8 +255,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 974.0, 703.5, 121.0, 57.0 ],
-					"presentation_linecount" : 5,
+					"patching_rect" : [ 974.0, 703.5, 121.0, 58.0 ],
 					"text" : "The Envelope follower takes audio input and filters it to get a general shape of the amplitude envelope. Then"
 				}
 
@@ -593,13 +615,14 @@
 					"orientation" : 1,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 736.0, 680.0, 121.0, 45.0 ],
+					"patching_rect" : [ 736.0, 680.0, 121.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_initial" : [ 0 ],
 							"parameter_longname" : "live.gain~[6]",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "live.gain~",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -625,13 +648,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-37",
-					"linecount" : 4,
+					"linecount" : 5,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 614.0, 526.5, 52.0, 62.0 ],
-					"text" : "vec3 -29. 44.2 385.39"
+					"patching_rect" : [ 614.0, 526.5, 52.0, 77.0 ],
+					"text" : "/example/3/rotate 0. 0. 212.776169"
 				}
 
 			}
@@ -681,7 +704,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 61.0, 504.5, 50.0, 49.0 ],
+					"patching_rect" : [ 61.0, 504.5, 50.0, 50.0 ],
 					"text" : "/window/openorclose"
 				}
 
@@ -809,13 +832,14 @@
 					"orientation" : 1,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 61.0, 372.5, 121.0, 45.0 ],
+					"patching_rect" : [ 61.0, 372.5, 121.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_initial" : [ 0 ],
 							"parameter_longname" : "live.gain~",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "live.gain~",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -1479,6 +1503,7 @@
 							"parameter_longname" : "live.gain~[5]",
 							"parameter_mmax" : 6.0,
 							"parameter_mmin" : -70.0,
+							"parameter_modmode" : 0,
 							"parameter_shortname" : "live.gain~",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4
@@ -1725,7 +1750,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.0, 167.0, 146.0, 23.0 ],
+					"patching_rect" : [ 39.0, 680.0, 146.0, 23.0 ],
 					"text" : "udpsend localhost 7001"
 				}
 
@@ -2250,6 +2275,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-43", 0 ],
+					"source" : [ "obj-41", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-31", 2 ],
 					"source" : [ "obj-44", 0 ]
 				}
@@ -2699,58 +2738,9 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Syn1.maxpat",
-				"bootpath" : "D:/Git Repos/ProjPt2/CA-GR3D-Project",
+				"bootpath" : "D:/Git Repos/CA-501Proj",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "UT1.wav",
-				"bootpath" : "D:/Git Repos/CA-GR3D-Project/Assets/Sounds",
-				"patcherrelativepath" : "../../CA-GR3D-Project/Assets/Sounds",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "UT2.wav",
-				"bootpath" : "D:/Git Repos/CA-GR3D-Project/Assets/Sounds",
-				"patcherrelativepath" : "../../CA-GR3D-Project/Assets/Sounds",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "UT3.wav",
-				"bootpath" : "D:/Git Repos/CA-GR3D-Project/Assets/Sounds",
-				"patcherrelativepath" : "../../CA-GR3D-Project/Assets/Sounds",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "UT4.wav",
-				"bootpath" : "D:/Git Repos/CA-GR3D-Project/Assets/Sounds",
-				"patcherrelativepath" : "../../CA-GR3D-Project/Assets/Sounds",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "UT5.wav",
-				"bootpath" : "D:/Git Repos/CA-GR3D-Project/Assets/Sounds",
-				"patcherrelativepath" : "../../CA-GR3D-Project/Assets/Sounds",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "UT6.wav",
-				"bootpath" : "D:/Git Repos/CA-GR3D-Project/Assets/Sounds",
-				"patcherrelativepath" : "../../CA-GR3D-Project/Assets/Sounds",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "UT7.wav",
-				"bootpath" : "D:/Git Repos/CA-GR3D-Project/Assets/Sounds",
-				"patcherrelativepath" : "../../CA-GR3D-Project/Assets/Sounds",
-				"type" : "WAVE",
 				"implicit" : 1
 			}
 , 			{
