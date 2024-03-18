@@ -563,6 +563,19 @@ MonoBehaviour:
   _localHostMode: 0
   _localHost: 142.231.164.66
   _localPort: 7001
+--- !u!114 &1819874586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819874573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7420012c599cad428201631800fb304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyChange: 0
 --- !u!1 &1956769245 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3206993793656741040, guid: 7b7f3ea7cd3820348a3e2dd065f390b3, type: 3}
@@ -785,6 +798,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5893764774674202561, guid: 0bd4154d9123af04491bca2639ac0917, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1819874584}
+    - targetCorrespondingSourceObject: {fileID: 5893764774674202561, guid: 0bd4154d9123af04491bca2639ac0917, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1819874586}
   m_SourcePrefab: {fileID: 100100000, guid: 0bd4154d9123af04491bca2639ac0917, type: 3}
 --- !u!1001 &2556693575179173060
 PrefabInstance:
@@ -908,6 +924,26 @@ PrefabInstance:
     - target: {fileID: 2861403381054492498, guid: d791503b735c8d545ad422700c320c58, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408277347198751581, guid: d791503b735c8d545ad422700c320c58, type: 3}
+      propertyPath: far clip plane
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408277347198751581, guid: d791503b735c8d545ad422700c320c58, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408277347198751581, guid: d791503b735c8d545ad422700c320c58, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408277347198751581, guid: d791503b735c8d545ad422700c320c58, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408277347198751581, guid: d791503b735c8d545ad422700c320c58, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4079419617068390921, guid: d791503b735c8d545ad422700c320c58, type: 3}
       propertyPath: m_Enabled
