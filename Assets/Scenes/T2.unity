@@ -20711,7 +20711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4079419617068390921, guid: d791503b735c8d545ad422700c320c58, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4998405717592380984, guid: d791503b735c8d545ad422700c320c58, type: 3}
       propertyPath: m_IsActive
@@ -20767,7 +20767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965770655037914921, guid: d791503b735c8d545ad422700c320c58, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6998773558968838731, guid: d791503b735c8d545ad422700c320c58, type: 3}
       propertyPath: m_IsActive
@@ -24781,6 +24781,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
       propertyPath: m_VideoClip
       value: 

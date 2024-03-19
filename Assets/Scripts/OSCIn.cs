@@ -1,6 +1,7 @@
 using extOSC;
 using UnityEngine;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 namespace OSC.trans
 {
@@ -33,13 +34,22 @@ namespace OSC.trans
             _receiver.Bind(_oscAddress, MessageReceived);
         }
 
-        public void MessageReceived(OSCMessage scene)
+        private void MessageReceived(OSCMessage scene)
         {
             Debug.Log(scene);
             var value = scene.Values[0].IntValue;
-            Variables.Application.Set("scene", value);
-          
+            if (value == 1)
+            {
+                SceneManager.LoadScene(1);
+            }
+            else if (value == 2)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (value == 3)
+            {
+                SceneManager.LoadScene(3);
+            }
         }
-
     }
 }
