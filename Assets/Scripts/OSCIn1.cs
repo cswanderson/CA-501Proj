@@ -38,17 +38,17 @@ namespace OSC.trans
         {
             Debug.Log(scene);
             var value = scene.Values[0].IntValue;
-            if (value == 1)
+            if (value == 0)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else if (value == 1)
             {
                 SceneManager.LoadScene(1);
             }
             else if (value == 2)
             {
                 SceneManager.LoadScene(2);
-            }
-            else if (value == 3)
-            {
-                SceneManager.LoadScene(3);
             }
         }
     }

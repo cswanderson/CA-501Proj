@@ -1,13 +1,15 @@
 using extOSC;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
 
-    [SerializeField] public int ActiveScene;
-    public void Trig1()
+    [SerializeField] private int scene;
+    
+    private void OnTriggerEnter(Collider other)
     {
-        Variables.Application.Set("ActiveScene", 1);
-        }
+        SceneManager.LoadScene(scene);
+    }
 }
