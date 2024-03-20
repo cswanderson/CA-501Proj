@@ -2,10 +2,14 @@ using extOSC;
 using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
+using Plugin = getReal3D.Plugin;
 
 namespace OSC.trans
 {
     public class OSCIn1 : MonoBehaviour
+    
+ 
+    
     {
         private OSCTransmitter _transmitter;
 
@@ -13,8 +17,12 @@ namespace OSC.trans
 
         private const string _oscAddress = "/scene";
 
+        private string gID;
+        
         protected virtual void Start()
         {
+            gID = Plugin.getClusterID().ToString();
+            
             // Creating a transmitter.
             _transmitter = gameObject.AddComponent<OSCTransmitter>();
 
@@ -28,8 +36,20 @@ namespace OSC.trans
             _receiver = gameObject.AddComponent<OSCReceiver>();
 
             // Set local port.
+            if (gID == "0")
+            {
             _receiver.LocalPort = 7001;
-
+            
+            }
+            else if (gID == "1")
+            {
+                _receiver.LocalPort = 7002;
+            }
+            if (gID == "2")
+            {
+                _receiver.LocalPort = 7003;
+            }
+            
             // Bind "MessageReceived" method to special address.
             _receiver.Bind(_oscAddress, MessageReceived);
         }

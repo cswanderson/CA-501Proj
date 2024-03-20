@@ -24762,7 +24762,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
       propertyPath: m_VideoClip
