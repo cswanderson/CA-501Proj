@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: SCh
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"SCh","summary":null,"pan":{"x":0.0,"y":-30.0},"zoom":1.0,"elements":[{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"SChange1","$type":"System.String"}},"position":{"x":-599.0,"y":-113.0},"guid":"6a102622-f493-4300-a947-2ff71415f2b3","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"9"},{"chainable":false,"member":{"name":"localPosition","parameterTypes":null,"targetType":"UnityEngine.Transform","targetTypeName":"UnityEngine.Transform","$version":"A"},"defaultValues":{"target":null,"input":{"x":21.0,"y":61.0,"z":-254.0,"$type":"UnityEngine.Vector3"}},"position":{"x":-99.0,"y":-109.0},"guid":"8f70feb8-d528-4e4b-bd1e-0042ebaddf8e","$version":"A","$type":"Unity.VisualScripting.SetMember","$id":"11"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-390.0,"y":-109.0},"guid":"10a849fc-6cad-4012-9967-f24f1502c263","$version":"A","$type":"Unity.VisualScripting.OnCollisionEnter","$id":"14"},{"sourceUnit":{"$ref":"14"},"sourceKey":"trigger","destinationUnit":{"$ref":"11"},"destinationKey":"assign","guid":"1d5d567d-9001-428f-8e25-9dd76b924401","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"9"},"sourceKey":"value","destinationUnit":{"$ref":"14"},"destinationKey":"target","guid":"41a55629-6364-4346-a196-9e1251f82046","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []

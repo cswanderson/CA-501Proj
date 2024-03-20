@@ -1,15 +1,49 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartSpot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private string sceneName;
+
+
+    private void SCheck()
     {
-        var aCts = SceneManager.GetActiveScene().ToString();
-        if (aCts == "T2")
+        if (sceneName == "T1")
         {
-            GameObject.Find("GR3D Player").GetComponent<Transform>().localPosition.Set(newX: 21, newY: 20, newZ: -264);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().localPosition.Set(newX: 58, newY: 31, newZ: 87);
+        }
+
+        else if (sceneName == "T2")
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().localPosition.Set(newX: 21, newY: 61, newZ: 254);
+        }
+        else if (sceneName == "T3")
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().localPosition.Set(newX: 21, newY: 61, newZ: 254);
         }
     }
+
+
+    //void Awake()
+   // {
+       // var scene = SceneManager.GetActiveScene();
+        //Debug.Log("Active Scene is '" + scene.name + "'.");
+       // sceneName = scene.name;
+       // SCheck();
+    //}
+
+    //void OnSceneLoaded (Scene scene, LoadSceneMode mode)
+   //{
+    //  sceneName = scene.name;
+
+      // Debug.Log("OnSceneLoaded: " + scene.name.ToString());
+       //Debug.Log(mode);
+
+        //if (SceneManager.GetActiveScene().isLoaded == true)
+       //{
+            //SCheck();
+        //}
+    //}
+
 }
