@@ -24765,9 +24765,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_Looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 5cea0f5f2f200e84f873a3cd340608f0, type: 3}
+      objectReference: {fileID: 32900000, guid: f26b61e492f4e3941b575c9d070ae6e2, type: 3}
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_RenderMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_SkipOnDrop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 3b44b78b5adf85641a5039912e54c432, type: 2}
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_TimeUpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_WaitForFirstFrame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836923718585824932, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
+      propertyPath: m_TargetMaterialProperty
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2712311464588302222, guid: daecc16b212ff884685b2447dbc3d085, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
