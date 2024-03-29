@@ -97,6 +97,7 @@ sysinfo.txt
 /[Aa]ssets/TrueClouds/
 /[Aa]ssets/Reversed Interactive/
 /[Aa]ssets/Standard Assets/
+/[Aa]ssets/VolumetricFog/
 /TestBuilds/
 
 # Ignoring GR3D package since it's propietary. 
