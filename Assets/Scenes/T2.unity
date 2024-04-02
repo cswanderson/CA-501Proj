@@ -23759,21 +23759,21 @@ MonoBehaviour:
   _sun: {fileID: 0}
   _timeBetweenTextureUpdates: 0.2
   _sunCopyColor: 1
-  _density: 1
-  _noiseStrength: 0.767
+  _density: 0.524
+  _noiseStrength: 0.391
   _noiseFinalMultiplier: 1
-  _noiseSparse: 0
-  _distance: 0
+  _noiseSparse: 1.086
+  _distance: 97
   _maxFogLength: 1000
   _maxFogLengthFallOff: 0.7
-  _distanceFallOff: 0
-  _height: 8
-  _heightFallOff: 0.6
+  _distanceFallOff: 2.05
+  _height: 149
+  _heightFallOff: 0.646
   _deepObscurance: 1
-  _baselineHeight: 8
+  _baselineHeight: 2.44
   _baselineRelativeToCamera: 0
   _baselineRelativeToCameraDelay: 0
-  _noiseScale: 1.6
+  _noiseScale: 10.91
   _alpha: 1
   _color: {r: 0.125, g: 0.125, b: 0.125, a: 1}
   _specularColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
@@ -23781,9 +23781,9 @@ MonoBehaviour:
   _specularIntensity: 0.575
   _lightDirection: {x: 1, y: 0, z: -1}
   _lightIntensity: 1
-  _lightColor: {r: 0.8396226, g: 0.65351385, b: 0.22574759, a: 1}
+  _lightColor: {r: 0.6886792, g: 0.61855984, b: 0.5489943, a: 1}
   _updateTextureSpread: 1
-  _speed: 0.0075
+  _speed: 0.031
   _windDirection: {x: 1, y: 0, z: 0}
   _useRealTime: 0
   _skyColor: {r: 0.125, g: 0.125, b: 0.125, a: 1}
@@ -23813,8 +23813,56 @@ MonoBehaviour:
   _fogAreaHeight: 0
   _fogAreaSortingMode: 0
   _fogAreaRenderOrder: 1
-  pointLightParams: []
-  pointLightDataMigrated: 0
+  pointLightParams:
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 2
+    rangeMultiplier: 1
+    intensity: 1.5
+    intensityMultiplier: 1
+    position: {x: 9.8090515, y: 62.04033, z: -262.62964}
+    color: {r: 1, g: 0.87843144, b: 0.7294118, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 2
+    rangeMultiplier: 1
+    intensity: 1.5
+    intensityMultiplier: 1
+    position: {x: 9.8090515, y: 62.04033, z: -264.04565}
+    color: {r: 1, g: 0.87843144, b: 0.7294118, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1
+    intensityMultiplier: 1
+    position: {x: 15.911049, y: 62.53734, z: -265.65164}
+    color: {r: 0.85154855, g: 0.9056604, b: 0.9046236, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1.5
+    intensityMultiplier: 1
+    position: {x: 8.937592, y: 61.44594, z: -265.35764}
+    color: {r: 1, g: 0.7864, b: 0.46600002, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1.5
+    intensityMultiplier: 1
+    position: {x: 9.219055, y: 61.37053, z: -265.71133}
+    color: {r: 1, g: 0.7864, b: 0.46600002, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1.5
+    intensityMultiplier: 1
+    position: {x: 8.997704, y: 61.41693, z: -266.12033}
+    color: {r: 1, g: 0.7864, b: 0.46600002, a: 1}
+  pointLightDataMigrated: 1
   _pointLights:
   - {fileID: 0}
   - {fileID: 0}
@@ -23859,17 +23907,17 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 0, a: 1}
   _pointLightTrackingAuto: 0
   _pointLightTrackingPivot: {fileID: 0}
-  _pointLightTrackingCount: 0
-  _pointLightTrackingCheckInterval: 1
+  _pointLightTrackingCount: 2
+  _pointLightTrackingCheckInterval: 1.01
   _pointLightTrackingNewLightsCheckInterval: 3
-  _pointLightInscattering: 1
-  _pointLightIntensity: 1
-  _pointLightInsideAtten: 0
-  _downsampling: 1
+  _pointLightInscattering: 1.27
+  _pointLightIntensity: 1.24
+  _pointLightInsideAtten: 0.37
+  _downsampling: 3
   _forceComposition: 0
-  _blurComposition: 0
+  _blurComposition: 1
   _blurEdgeThreshold: 0.002
-  _edgeImprove: 0
+  _edgeImprove: 1
   _edgeThreshold: 0.0005
   _stepping: 12
   _steppingNear: 25
@@ -23877,18 +23925,18 @@ MonoBehaviour:
   _ditherStrength: 0.75
   _jitterStrength: 0.5
   _lightScatteringEnabled: 1
-  _lightScatteringDiffusion: 0.7
+  _lightScatteringDiffusion: 0.652
   _lightScatteringSpread: 0.686
   _lightScatteringTint: {r: 1, g: 1, b: 1, a: 0}
   _lightScatteringSamples: 16
   _lightScatteringWeight: 1.9
   _lightScatteringIllumination: 18
-  _lightScatteringDecay: 0.986
+  _lightScatteringDecay: 0.9812
   _lightScatteringExposure: 0
   _lightScatteringJittering: 0.5
   _lightScatteringBlurDownscale: 1
   _fogBlur: 0
-  _fogBlurDepth: 0.05
+  _fogBlurDepth: 0.017
   _sunShadows: 0
   _sunShadowsLayerMask:
     serializedVersion: 2
@@ -23901,7 +23949,7 @@ MonoBehaviour:
   _sunShadowsBakeMode: 1
   _sunShadowsRefreshInterval: 0
   _sunShadowsCancellation: 0
-  _turbulenceStrength: 0.09
+  _turbulenceStrength: 0.4
   _useXYPlane: 0
   _useSinglePassStereoRenderingMatrix: 0
   _reduceFlickerBigWorlds: 0
@@ -23910,13 +23958,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8388608
   _maskDownsampling: 1
-  isRendering: 0
+  isRendering: 1
   fogRenderer: {fileID: 0}
   _fogOfWarEnabled: 0
   _fogOfWarCenter: {x: 0, y: 0, z: 0}
   _fogOfWarSize: {x: 1024, y: 0, z: 1024}
   _fogOfWarTextureSize: 256
-  _fogOfWarRestoreDelay: 0
+  _fogOfWarRestoreDelay: 6.5
   _fogOfWarRestoreDuration: 2
   _fogOfWarSmoothness: 1
   _fogOfWarBlur: 0
