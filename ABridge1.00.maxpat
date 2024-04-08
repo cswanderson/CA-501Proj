@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 85.0, 276.0, 996.0, 253.0 ],
+		"rect" : [ 155.0, 199.0, 996.0, 476.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-136",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 605.0, 332.0, 50.0, 22.0 ],
+					"text" : "100"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-116",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 624.5, 287.0, 53.0, 22.0 ],
+					"text" : "route 20"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-132",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -57,7 +81,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 393.884628295898438, 1120.000106811523438, 93.0, 22.0 ],
-					"presentation_linecount" : 3,
 					"text" : "-7.34 -479. 1. 0."
 				}
 
@@ -93,7 +116,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 161.0, 1116.923183441162109, 84.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "-3.7 -84. -1. 0."
 				}
 
@@ -129,7 +151,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 750.769302368164062, 1083.0770263671875, 65.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "0. 1. 0.4 0."
 				}
 
@@ -165,7 +186,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 280.000026702880859, 1038.461637496948242, 76.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "0. -436. 0. 0."
 				}
 
@@ -189,7 +209,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 451.375, 1058.000102996826172, 130.625, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "Waterfall Creek"
 				}
 
@@ -202,7 +221,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 543.076974868774414, 1080.000102996826172, 75.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "0. -211. 0. 0."
 				}
 
@@ -770,7 +788,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 529.0, 957.0, 53.0, 36.0 ],
+					"patching_rect" : [ 529.0, 957.0, 55.0, 36.0 ],
 					"text" : "0. 81.88 0. 0."
 				}
 
@@ -808,7 +826,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 710.0, 346.5, 70.0, 23.0 ],
+					"patching_rect" : [ 706.0, 386.5, 70.0, 23.0 ],
 					"text" : "0., 1. 3000"
 				}
 
@@ -954,7 +972,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 596.0, 346.0, 70.0, 23.0 ],
+					"patching_rect" : [ 592.0, 385.5, 70.0, 23.0 ],
 					"text" : "1., 0. 3000"
 				}
 
@@ -1421,7 +1439,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 7.0, 339.0, 50.0, 22.0 ],
-					"text" : "0"
+					"text" : "43"
 				}
 
 			}
@@ -3629,6 +3647,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-136", 1 ],
+					"source" : [ "obj-116", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-86", 0 ],
 					"source" : [ "obj-117", 0 ]
 				}
@@ -3680,7 +3705,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-116", 0 ],
+					"order" : 0,
+					"source" : [ "obj-161", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
+					"order" : 1,
 					"source" : [ "obj-161", 2 ]
 				}
 

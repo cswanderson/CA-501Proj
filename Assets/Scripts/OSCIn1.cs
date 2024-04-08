@@ -54,12 +54,26 @@ namespace OSC.trans
         private Vector3 carRot;
         private Renderer cSatRend;
 
+        private void OnEnable()
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+
+        private void OnDisable()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            if (scene.buildIndex == 0)
+            {
+            GetStars();
+        }
+        }
         public void Start()
         {
-            sTars = GameObject.Find("StarClusteReg");
-            cSatRend = sTars.GetComponent<Renderer>();
-            cSatMat = cSatRend.material;
-            bigC = GameObject.Find("BigC_prefab");
+           GetStars();
             
 
             //wDirCarx = GameObject.Find("BigC_prefab").GetComponent<FMPCHelper>().windDirection.x;
@@ -113,6 +127,13 @@ namespace OSC.trans
             _receiver.Bind(_CarRotAddress, ReceiveMessageCarRot);
         }
 
+        private void GetStars()
+        {
+            sTars = GameObject.Find("StarClusteReg");
+            cSatRend = sTars.GetComponent<Renderer>();
+            cSatMat = cSatRend.material;
+            bigC = GameObject.Find("BigC_prefab");
+        }
         private void ReceiveMessageScene(OSCMessage scene)
         {
 
@@ -163,7 +184,7 @@ namespace OSC.trans
         {
             saturation = sat.Values[0].FloatValue;
             cSatMat.SetFloat("_Color_Saturation", saturation);
-                   
+       
         }
         private void ReceiveMessageMult(OSCMessage mult)
         {
