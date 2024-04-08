@@ -3,7 +3,7 @@ using extOSC;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-using static UnityEditor.FilePathAttribute;
+//using UnityEditor.FilePathAttribute;
 using Plugin = getReal3D.Plugin;
 
 
@@ -29,6 +29,8 @@ namespace OSC.trans
         private const string _cMinScreenAddress = "/min_screen_size";
         private const string _windDCarAddress = "/Wind_DirectionCar";
         private const string _windPCarAddress = "/Wind_PowerCar";
+        private const string _CarPosAddress = "/CarPosition";
+        private const string _CarRotAddress = "/CarRotation";
 
         private string gID;
         private Vector3 newvectorPos;
@@ -48,6 +50,8 @@ namespace OSC.trans
         private float minScreen;
         private float wPowCar;
         private Vector3 wDirCar;
+        private Vector3 carPos;
+        private Vector3 carRot;
         private Renderer cSatRend;
 
         public void Start()
@@ -105,6 +109,8 @@ namespace OSC.trans
             _receiver.Bind(_cMinScreenAddress, ReceiveMessageMinScreen);
             _receiver.Bind(_windDCarAddress, ReceiveMessageWindDCar);
             _receiver.Bind(_windPCarAddress, ReceiveMessageWindPCar);
+            _receiver.Bind(_CarPosAddress, ReceiveMessageCarPos);
+            _receiver.Bind(_CarRotAddress, ReceiveMessageCarRot);
         }
 
         private void ReceiveMessageScene(OSCMessage scene)
@@ -208,6 +214,22 @@ namespace OSC.trans
 
             bigC.GetComponent<FMPCHelper>().windPower = wPowCar;
 
+        }
+
+        private void ReceiveMessageCarPos(OSCMessage CarPos)
+        {
+            carPos.x = CarPos.Values[0].FloatValue;
+            carPos.y = CarPos.Values[1].FloatValue;
+            carPos.z = CarPos.Values[2].FloatValue;
+            bigC.transform.localPosition = carPos;
+        }
+
+        private void ReceiveMessageCarRot(OSCMessage CarRot)
+        {
+            carRot.x = CarRot.Values[0].FloatValue;
+            carRot.y = CarRot.Values[1].FloatValue;
+            carRot.z = CarRot.Values[2].FloatValue;
+            bigC.transform.localEulerAngles = carRot;
         }
     }
 }
