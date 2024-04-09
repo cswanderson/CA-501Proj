@@ -907,7 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDirty: 0
-  _preset: 10
+  _preset: 1000
   _profile: {fileID: 0}
   _profileSync: 0
   _useFogVolumes: 0
@@ -931,15 +931,15 @@ MonoBehaviour:
   _sun: {fileID: 0}
   _timeBetweenTextureUpdates: 0.2
   _sunCopyColor: 1
-  _density: 1
-  _noiseStrength: 0.8
+  _density: 0.3
+  _noiseStrength: 0.6
   _noiseFinalMultiplier: 1
   _noiseSparse: 0
   _distance: 0
   _maxFogLength: 1000
-  _maxFogLengthFallOff: 0
+  _maxFogLengthFallOff: 0.5
   _distanceFallOff: 0
-  _height: 4
+  _height: 6
   _heightFallOff: 0.6
   _deepObscurance: 1
   _baselineHeight: 0
@@ -950,20 +950,20 @@ MonoBehaviour:
   _color: {r: 0.89, g: 0.89, b: 0.89, a: 1}
   _specularColor: {r: 1, g: 1, b: 0.8, a: 1}
   _specularThreshold: 0.6
-  _specularIntensity: 0.2
+  _specularIntensity: 0.1
   _lightDirection: {x: 1, y: 0, z: -1}
-  _lightIntensity: 0.2
+  _lightIntensity: 0.12
   _lightColor: {r: 1, g: 1, b: 1, a: 1}
   _updateTextureSpread: 1
   _speed: 0.01
   _windDirection: {x: -1, y: 0, z: 0}
   _useRealTime: 0
-  _skyColor: {r: 0.89, g: 0.89, b: 0.89, a: 1}
-  _skyHaze: 50
-  _skyNoiseScale: 1.5
+  _skyColor: {r: 0.81, g: 0.81, b: 0.81, a: 0.8}
+  _skyHaze: 15
+  _skyNoiseScale: 1
   _skySpeed: 0.3
   _skyNoiseStrength: 0.1
-  _skyAlpha: 1
+  _skyAlpha: 0.8
   _skyDepth: 0.999
   _character: {fileID: 0}
   _fogVoidTopology: 0
@@ -985,8 +985,56 @@ MonoBehaviour:
   _fogAreaHeight: 0
   _fogAreaSortingMode: 0
   _fogAreaRenderOrder: 1
-  pointLightParams: []
-  pointLightDataMigrated: 0
+  pointLightParams:
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1
+    intensityMultiplier: 1
+    position: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 1, b: 0, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1
+    intensityMultiplier: 1
+    position: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 1, b: 0, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1
+    intensityMultiplier: 1
+    position: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 1, b: 0, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1
+    intensityMultiplier: 1
+    position: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 1, b: 0, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1
+    intensityMultiplier: 1
+    position: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 1, b: 0, a: 1}
+  - light: {fileID: 0}
+    lightParams: {fileID: 0}
+    range: 0
+    rangeMultiplier: 1
+    intensity: 1
+    intensityMultiplier: 1
+    position: {x: 0, y: 0, z: 0}
+    color: {r: 1, g: 1, b: 0, a: 1}
+  pointLightDataMigrated: 1
   _pointLights:
   - {fileID: 0}
   - {fileID: 0}
@@ -1030,7 +1078,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 0, a: 1}
   - {r: 1, g: 1, b: 0, a: 1}
   _pointLightTrackingAuto: 0
-  _pointLightTrackingPivot: {fileID: 0}
+  _pointLightTrackingPivot: {fileID: 1017430299}
   _pointLightTrackingCount: 0
   _pointLightTrackingCheckInterval: 1
   _pointLightTrackingNewLightsCheckInterval: 3
@@ -1043,8 +1091,8 @@ MonoBehaviour:
   _blurEdgeThreshold: 0.002
   _edgeImprove: 0
   _edgeThreshold: 0.0005
-  _stepping: 12
-  _steppingNear: 1
+  _stepping: 8
+  _steppingNear: 0
   _dithering: 0
   _ditherStrength: 0.75
   _jitterStrength: 0.5
@@ -1083,7 +1131,7 @@ MonoBehaviour:
     m_Bits: 8388608
   _maskDownsampling: 1
   isRendering: 0
-  fogRenderer: {fileID: 0}
+  fogRenderer: {fileID: 1330600371}
   _fogOfWarEnabled: 0
   _fogOfWarCenter: {x: 0, y: 0, z: 0}
   _fogOfWarSize: {x: 1024, y: 0, z: 1024}
