@@ -17,6 +17,7 @@ public class SceneChanger : MonoBehaviour
     public float LaunchScene3A = 176.6f;
     public float LaunchScene2 = 208.3f;
     public float LaunchScene3B = 281.88f;
+    public float Fade1 = 3.0f;
     private float fadeIn = 3f;
     private float fadeOut;
     public Transform newPos;
@@ -36,6 +37,7 @@ public class SceneChanger : MonoBehaviour
     private Vector3 carPos;
     private Vector3 carRot;
     private Renderer cSatRend;
+    private float tFadeIn;
 
     public float fadeDur = 3.0f;
 
@@ -59,12 +61,19 @@ public class SceneChanger : MonoBehaviour
     void Start()
     {
         GetStars();
+        StartCoroutine(Begin(Fade1));
         StartCoroutine(WaitAndChangeScene1(LaunchScene1));
         StartCoroutine(WaitAndChangeScene3A(LaunchScene3A));
         StartCoroutine(WaitAndChangeScene2(LaunchScene2));
         StartCoroutine(WaitAndChangeScene3B(LaunchScene3B));
         gID = Plugin.getClusterID().ToString();
  
+    }
+
+    private void Update()
+    {
+        tFadeIn += Time.deltaTime;
+        Debug.Log(tFadeIn);
     }
     private void GetStars()
     {
@@ -73,16 +82,23 @@ public class SceneChanger : MonoBehaviour
         cSatMat = cSatRend.material;
         bigC = GameObject.Find("BigC_prefab");
     }
-    private void Fadein1()
-    {
-        fadeMat.color = new Color(0, 0, 0, Time.deltaTime % 100.0f / fadeIn);
-    }
+   
 
-IEnumerator WaitAndChangeScene1(float delay)
+    IEnumerator Begin(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+    
+            float fIn = Mathf.Lerp(1.0f, 0.0f, tFadeIn);
+            fadeMat.color = new Color(0, 0, 0, fIn);
+  
+       
+     
+    }
+    IEnumerator WaitAndChangeScene1(float delay)
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(Scene1Name);
-        Fadein1();  
+     
     }
 
         IEnumerator WaitAndChangeScene3A(float delay)
