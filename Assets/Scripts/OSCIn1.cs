@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using extOSC;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,11 +12,14 @@ namespace OSC.trans
     public class OSCIn1 : MonoBehaviour
 
     {
+        [SerializeField] private List<AudioSource> allMusicSources;
+        
         private OSCTransmitter _transmitter;
 
         private OSCReceiver _receiver;
         
         private const string _sceneAddress = "/scene";
+        private const string _playAddress = "/play";
         private const string _posAddress = "/position";
         private const string _rotAddress = "/rotation";
         private const string _fadeAddress = "/fade";
@@ -52,6 +56,7 @@ namespace OSC.trans
         private Vector3 carPos;
         private Vector3 carRot;
         private Renderer cSatRend;
+        private float mPlay;
 
         private void OnEnable()
         {
@@ -124,7 +129,10 @@ namespace OSC.trans
             _receiver.Bind(_windPCarAddress, ReceiveMessageWindPCar);
             _receiver.Bind(_CarPosAddress, ReceiveMessageCarPos);
             _receiver.Bind(_CarRotAddress, ReceiveMessageCarRot);
+            _receiver.Bind(_playAddress, ReceiveMessagePlay);
         }
+
+     
 
         private void GetStars()
         {
@@ -132,6 +140,26 @@ namespace OSC.trans
             cSatRend = sTars.GetComponent<Renderer>();
             cSatMat = cSatRend.material;
             bigC = GameObject.Find("BigC_prefab");
+        }
+        
+        private void ReceiveMessagePlay(OSCMessage play)
+        {
+            Debug.Log("Test");
+            var value = play.Values[0].IntValue;
+            if (value == 1)
+            {
+                foreach (AudioSource source in allMusicSources)
+                {
+                    source.Play();
+                }
+            }
+            if (value == 0)
+            {
+                foreach (AudioSource source in allMusicSources)
+                {
+                    source.Stop();
+                }
+            }
         }
         private void ReceiveMessageScene(OSCMessage scene)
         {
