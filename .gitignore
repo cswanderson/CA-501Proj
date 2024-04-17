@@ -99,6 +99,7 @@ sysinfo.txt
 /[Aa]ssets/Standard Assets/
 /[Aa]ssets/VolumetricFog/
 /[Aa]ssets/Resources/
+/[Aa]ssets/Sounds/
 /TestBuilds/
 
 # Ignoring GR3D package since it's propietary. 

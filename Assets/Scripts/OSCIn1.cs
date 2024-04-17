@@ -3,7 +3,6 @@ using extOSC;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
-//using UnityEditor.FilePathAttribute;
 using Plugin = getReal3D.Plugin;
 
 
